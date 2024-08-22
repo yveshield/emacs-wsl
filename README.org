@@ -27,12 +27,12 @@ Go to [[https://learn.microsoft.com/en-us/windows/wsl/install][Install WSL | Mic
 To install the latest Emacs 29 version in Ubuntu 22.04 follow those steps:
 
 1. Install all dependencies (mostly taken from the [[https://github.com/alexmurray/emacs-snap/blob/master/snapcraft.yaml][snap]])\\
-   
+
    #+BEGIN_SRC shell
      sudo apt update
      sudo apt install -y autoconf automake bsd-mailx build-essential \
        dbus-x11 debhelper dpkg-dev emacs-bin-common emacs-common g++-10 gawk \
-       gcc-10 git gvfs ibus-gtk3 language-pack-en-base libacl1-dev libasound2 \
+       gcc-10 git gvfs ibus-gtk3 language-pack-en-base libacl1-dev libasound2t64 \
        libasound2-dev libaspell15 libasyncns0 libatk1.0-0 libatk-bridge2.0-0 \
        libatspi2.0-0 libbrotli1 libc6 libc6 libc6-dev libc6-dev libcairo2 \
        libcairo2-dev libcairo-gobject2 libcanberra0 libcanberra-gtk3-0 \
@@ -78,7 +78,7 @@ To install the latest Emacs 29 version in Ubuntu 22.04 follow those steps:
    #+END_SRC
 
 3. Configure and install Emacs\\
-   
+
    This step will take some time, and you might be prompted to enter your password once.
 
    Optional features in used (feel free to remove any that you don't need):
@@ -91,7 +91,7 @@ To install the latest Emacs 29 version in Ubuntu 22.04 follow those steps:
    Other compilation options you might want to enable:
 
    - ~--with-pgtk~ Use GTK to support window systems other than X. If you want to use Wayland instead of X11.
-      
+
    #+BEGIN_SRC shell
        cd ~/emacs
        export CC="gcc-10" CXX="gcc-10"
@@ -149,7 +149,7 @@ If you want to change the keyboard layout used make sure ~x11-xkb-utils~ is inst
   setxkbmap -layout us
 #+END_SRC
 
-to =~/.bashrc= or to an alias. 
+to =~/.bashrc= or to an alias.
 
 ** Generate SSH Key
 
@@ -271,7 +271,7 @@ Should you want to preserve your GUI Emacs sessions between sleep, there are thr
 
 ** Where is the root folder located?
 
-The root is accessible as ~\\wsl$~ in file explorer. 
+The root is accessible as ~\\wsl$~ in file explorer.
 
 ** How to access Linux files from Windows?
 
